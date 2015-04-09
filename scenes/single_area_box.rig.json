@@ -1,0 +1,1340 @@
+{
+	"version" : "2.0",
+	"refreshRate" : 40,
+	"devices" : {
+		"LED_Top" : {
+			"channel" : 5,
+			"type" : "Source Four Lustr+ 36",
+			"parameters" : {
+				"color" : {
+					"type" : "color",
+					"channels" : {
+						"Blue" : 0,
+						"Amber" : 0,
+						"Cyan" : 0,
+						"Green" : 0,
+						"Red" : 0,
+						"Indigo" : 0,
+						"White" : 0
+					},
+					"basis" : {
+						"Amber" : [
+							22.75055,
+							16.650221,
+							0.002898
+						],
+						"Blue" : [
+							6.2441,
+							2.706676,
+							38.314226
+						],
+						"Cyan" : [
+							2.75181,
+							18.405105,
+							8.957865
+						],
+						"Green" : [
+							11.67676,
+							35.630649,
+							2.980725
+						],
+						"Indigo" : [
+							6.98871,
+							1.786141,
+							40.548044
+						],
+						"Red" : [
+							11.83373,
+							5.07042,
+							0.000015
+						],
+						"White" : [
+							53.02644,
+							57.20048,
+							51.420583
+						]
+					},
+					"weight" : 1,
+					"mode" : "ADDITIVE"
+				},
+				"intensity" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				},
+				"strobe" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				}
+			},
+			"metadata" : {
+				"Area" : "1",
+				"angle" : "top",
+				"color" : "1.0, 0.7020, 0.4431",
+				"exposure" : "3.0",
+				"filename" : "S4 LED Lustr+ 36 deg EDLT 6-11-13.ies",
+				"matrix" : "1, 0, 0, 0, 0, 2.22044605e-016, 1, 0, 0, -1, 2.22044605e-016, 0, 0, 0, 14, 1",
+				"samples" : "3",
+				"volume_samples" : "3"
+			}
+		},
+		"LED_Right" : {
+			"channel" : 4,
+			"type" : "Source Four Lustr+ 36",
+			"parameters" : {
+				"color" : {
+					"type" : "color",
+					"channels" : {
+						"Blue" : 0,
+						"Amber" : 0,
+						"Cyan" : 0,
+						"Green" : 0,
+						"Red" : 0,
+						"Indigo" : 0,
+						"White" : 0
+					},
+					"basis" : {
+						"Amber" : [
+							22.75055,
+							16.650221,
+							0.002898
+						],
+						"Blue" : [
+							6.2441,
+							2.706676,
+							38.314226
+						],
+						"Cyan" : [
+							2.75181,
+							18.405105,
+							8.957865
+						],
+						"Green" : [
+							11.67676,
+							35.630649,
+							2.980725
+						],
+						"Indigo" : [
+							6.98871,
+							1.786141,
+							40.548044
+						],
+						"Red" : [
+							11.83373,
+							5.07042,
+							0.000015
+						],
+						"White" : [
+							53.02644,
+							57.20048,
+							51.420583
+						]
+					},
+					"weight" : 1,
+					"mode" : "ADDITIVE"
+				},
+				"intensity" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				},
+				"strobe" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				}
+			},
+			"metadata" : {
+				"Area" : "1",
+				"angle" : "high side right",
+				"color" : "1.0, 0.7020, 0.4431",
+				"exposure" : "3.0",
+				"filename" : "S4 LED Lustr+ 36 deg EDLT 6-11-13.ies",
+				"matrix" : "3.33066907e-016, -1, -5.55111512e-017, 0, -0.516503453, -2.22044605e-016, 0.856285095, 0, -0.856285095, -2.77555756e-016, -0.516503453, 0, -6, 0, 14, 1",
+				"samples" : "3",
+				"volume_samples" : "3"
+			}
+		},
+		"LED_LeftShin" : {
+			"channel" : 13,
+			"type" : "Source Four Lustr+ 36",
+			"parameters" : {
+				"color" : {
+					"type" : "color",
+					"channels" : {
+						"Blue" : 0,
+						"Amber" : 0,
+						"Cyan" : 0,
+						"Green" : 0,
+						"Red" : 0,
+						"Indigo" : 0,
+						"White" : 0
+					},
+					"basis" : {
+						"Amber" : [
+							22.75055,
+							16.650221,
+							0.002898
+						],
+						"Blue" : [
+							6.2441,
+							2.706676,
+							38.314226
+						],
+						"Cyan" : [
+							2.75181,
+							18.405105,
+							8.957865
+						],
+						"Green" : [
+							11.67676,
+							35.630649,
+							2.980725
+						],
+						"Indigo" : [
+							6.98871,
+							1.786141,
+							40.548044
+						],
+						"Red" : [
+							11.83373,
+							5.07042,
+							0.000015
+						],
+						"White" : [
+							53.02644,
+							57.20048,
+							51.420583
+						]
+					},
+					"weight" : 1,
+					"mode" : "ADDITIVE"
+				},
+				"intensity" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				},
+				"strobe" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				}
+			},
+			"metadata" : {
+				"Area" : "1",
+				"angle" : "left shin",
+				"color" : "1.0, 0.7020, 0.4431",
+				"exposure" : "3.0",
+				"filename" : "S4 LED Lustr+ 36 deg EDLT 6-11-13.ies",
+				"matrix" : "1.11022302e-016, 1, 0, 0, 0.986629128, -2.22044605e-016, -0.16298157, 0, -0.16298157, 2.77555756e-017, -0.986629128, 0, 8, 0, 2, 1",
+				"samples" : "3",
+				"volume_samples" : "3"
+			}
+		},
+		"LED_LeftSide" : {
+			"channel" : 11,
+			"type" : "Source Four Lustr+ 36",
+			"parameters" : {
+				"color" : {
+					"type" : "color",
+					"channels" : {
+						"Blue" : 0,
+						"Amber" : 0,
+						"Cyan" : 0,
+						"Green" : 0,
+						"Red" : 0,
+						"Indigo" : 0,
+						"White" : 0
+					},
+					"basis" : {
+						"Amber" : [
+							22.75055,
+							16.650221,
+							0.002898
+						],
+						"Blue" : [
+							6.2441,
+							2.706676,
+							38.314226
+						],
+						"Cyan" : [
+							2.75181,
+							18.405105,
+							8.957865
+						],
+						"Green" : [
+							11.67676,
+							35.630649,
+							2.980725
+						],
+						"Indigo" : [
+							6.98871,
+							1.786141,
+							40.548044
+						],
+						"Red" : [
+							11.83373,
+							5.07042,
+							0.000015
+						],
+						"White" : [
+							53.02644,
+							57.20048,
+							51.420583
+						]
+					},
+					"weight" : 1,
+					"mode" : "ADDITIVE"
+				},
+				"intensity" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				},
+				"strobe" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				}
+			},
+			"metadata" : {
+				"Area" : "1",
+				"angle" : "side left",
+				"color" : "1.0, 0.7020, 0.4431",
+				"exposure" : "3.0",
+				"filename" : "S4 LED Lustr+ 36 deg EDLT 6-11-13.ies",
+				"matrix" : "0, 1, 0, 0, 0.99619472, -4.4408921e-016, -0.0871557444, 0, -0.0871557444, 2.77555756e-017, -0.99619472, 0, 8, 0, 4, 1",
+				"samples" : "3",
+				"volume_samples" : "3"
+			}
+		},
+		"LED_Back" : {
+			"channel" : 8,
+			"type" : "Source Four Lustr+ 36",
+			"parameters" : {
+				"color" : {
+					"type" : "color",
+					"channels" : {
+						"Blue" : 0,
+						"Amber" : 0,
+						"Cyan" : 0,
+						"Green" : 0,
+						"Red" : 0,
+						"Indigo" : 0,
+						"White" : 0
+					},
+					"basis" : {
+						"Amber" : [
+							22.75055,
+							16.650221,
+							0.002898
+						],
+						"Blue" : [
+							6.2441,
+							2.706676,
+							38.314226
+						],
+						"Cyan" : [
+							2.75181,
+							18.405105,
+							8.957865
+						],
+						"Green" : [
+							11.67676,
+							35.630649,
+							2.980725
+						],
+						"Indigo" : [
+							6.98871,
+							1.786141,
+							40.548044
+						],
+						"Red" : [
+							11.83373,
+							5.07042,
+							0.000015
+						],
+						"White" : [
+							53.02644,
+							57.20048,
+							51.420583
+						]
+					},
+					"weight" : 1,
+					"mode" : "ADDITIVE"
+				},
+				"intensity" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				},
+				"strobe" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				}
+			},
+			"metadata" : {
+				"Area" : "1",
+				"angle" : "back",
+				"color" : "1.0, 0.7020, 0.4431",
+				"exposure" : "3.0",
+				"filename" : "S4 LED Lustr+ 36 deg EDLT 6-11-13.ies",
+				"matrix" : "1, 0, 0, 0, 0, -0.510707974, 0.859754264, 0, 0, -0.859754264, -0.510707974, 0, 0, -6, 14, 1",
+				"samples" : "3",
+				"volume_samples" : "3"
+			}
+		},
+		"LED_Front" : {
+			"channel" : 2,
+			"type" : "Source Four Lustr+ 36",
+			"parameters" : {
+				"color" : {
+					"type" : "color",
+					"channels" : {
+						"Blue" : 0,
+						"Amber" : 0,
+						"Cyan" : 0,
+						"Green" : 0,
+						"Red" : 0,
+						"Indigo" : 0,
+						"White" : 0
+					},
+					"basis" : {
+						"Amber" : [
+							22.75055,
+							16.650221,
+							0.002898
+						],
+						"Blue" : [
+							6.2441,
+							2.706676,
+							38.314226
+						],
+						"Cyan" : [
+							2.75181,
+							18.405105,
+							8.957865
+						],
+						"Green" : [
+							11.67676,
+							35.630649,
+							2.980725
+						],
+						"Indigo" : [
+							6.98871,
+							1.786141,
+							40.548044
+						],
+						"Red" : [
+							11.83373,
+							5.07042,
+							0.000015
+						],
+						"White" : [
+							53.02644,
+							57.20048,
+							51.420583
+						]
+					},
+					"weight" : 1,
+					"mode" : "ADDITIVE"
+				},
+				"intensity" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				},
+				"strobe" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				}
+			},
+			"metadata" : {
+				"Area" : "1",
+				"angle" : "front",
+				"color" : "1.0, 0.7020, 0.4431",
+				"exposure" : "3.0",
+				"filename" : "S4 LED Lustr+ 36 deg EDLT 6-11-13.ies",
+				"gel" : "N\/C",
+				"matrix" : "-1, -1.22464685e-016, 0, 0, -6.12323426e-017, 0.5, 0.866025388, 0, -1.06057525e-016, 0.866025388, -0.5, 0, 0, 6, 14, 1",
+				"samples" : "3",
+				"volume_samples" : "3"
+			}
+		},
+		"LED_FrontUp" : {
+			"channel" : 14,
+			"type" : "Source Four Lustr+ 36",
+			"parameters" : {
+				"color" : {
+					"type" : "color",
+					"channels" : {
+						"Blue" : 0,
+						"Amber" : 0,
+						"Cyan" : 0,
+						"Green" : 0,
+						"Red" : 0,
+						"Indigo" : 0,
+						"White" : 0
+					},
+					"basis" : {
+						"Amber" : [
+							22.75055,
+							16.650221,
+							0.002898
+						],
+						"Blue" : [
+							6.2441,
+							2.706676,
+							38.314226
+						],
+						"Cyan" : [
+							2.75181,
+							18.405105,
+							8.957865
+						],
+						"Green" : [
+							11.67676,
+							35.630649,
+							2.980725
+						],
+						"Indigo" : [
+							6.98871,
+							1.786141,
+							40.548044
+						],
+						"Red" : [
+							11.83373,
+							5.07042,
+							0.000015
+						],
+						"White" : [
+							53.02644,
+							57.20048,
+							51.420583
+						]
+					},
+					"weight" : 1,
+					"mode" : "ADDITIVE"
+				},
+				"intensity" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				},
+				"strobe" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				}
+			},
+			"metadata" : {
+				"Area" : "1",
+				"angle" : "front up",
+				"color" : "1.0, 0.7020, 0.4431",
+				"exposure" : "3.0",
+				"filename" : "S4 LED Lustr+ 36 deg EDLT 6-11-13.ies",
+				"matrix" : "-0.999902189, -0.0139844464, -1.23165367e-016, 0, -0.00677979412, 0.484762222, -0.874619722, 0, 0.0122310724, -0.87453419, -0.484809607, 0, 0, 2, 1, 1",
+				"samples" : "3",
+				"volume_samples" : "3"
+			}
+		},
+		"LED_BackRight" : {
+			"channel" : 7,
+			"type" : "Source Four Lustr+ 36",
+			"parameters" : {
+				"color" : {
+					"type" : "color",
+					"channels" : {
+						"Blue" : 0,
+						"Amber" : 0,
+						"Cyan" : 0,
+						"Green" : 0,
+						"Red" : 0,
+						"Indigo" : 0,
+						"White" : 0
+					},
+					"basis" : {
+						"Amber" : [
+							22.75055,
+							16.650221,
+							0.002898
+						],
+						"Blue" : [
+							6.2441,
+							2.706676,
+							38.314226
+						],
+						"Cyan" : [
+							2.75181,
+							18.405105,
+							8.957865
+						],
+						"Green" : [
+							11.67676,
+							35.630649,
+							2.980725
+						],
+						"Indigo" : [
+							6.98871,
+							1.786141,
+							40.548044
+						],
+						"Red" : [
+							11.83373,
+							5.07042,
+							0.000015
+						],
+						"White" : [
+							53.02644,
+							57.20048,
+							51.420583
+						]
+					},
+					"weight" : 1,
+					"mode" : "ADDITIVE"
+				},
+				"intensity" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				},
+				"strobe" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				}
+			},
+			"metadata" : {
+				"Area" : "1",
+				"angle" : "back right",
+				"color" : "1.0, 0.7020, 0.4431",
+				"exposure" : "3.0",
+				"filename" : "S4 LED Lustr+ 36 deg EDLT 6-11-13.ies",
+				"matrix" : "0.70271337, -0.711473048, 0, 0, -0.51047796, -0.504192889, 0.696564257, 0, -0.495586723, -0.489485025, -0.717494428, 0, -6, -6, 14, 1",
+				"samples" : "3",
+				"volume_samples" : "3"
+			}
+		},
+		"LED_Left" : {
+			"channel" : 6,
+			"type" : "Source Four Lustr+ 36",
+			"parameters" : {
+				"color" : {
+					"type" : "color",
+					"channels" : {
+						"Blue" : 0,
+						"Amber" : 0,
+						"Cyan" : 0,
+						"Green" : 0,
+						"Red" : 0,
+						"Indigo" : 0,
+						"White" : 0
+					},
+					"basis" : {
+						"Amber" : [
+							22.75055,
+							16.650221,
+							0.002898
+						],
+						"Blue" : [
+							6.2441,
+							2.706676,
+							38.314226
+						],
+						"Cyan" : [
+							2.75181,
+							18.405105,
+							8.957865
+						],
+						"Green" : [
+							11.67676,
+							35.630649,
+							2.980725
+						],
+						"Indigo" : [
+							6.98871,
+							1.786141,
+							40.548044
+						],
+						"Red" : [
+							11.83373,
+							5.07042,
+							0.000015
+						],
+						"White" : [
+							53.02644,
+							57.20048,
+							51.420583
+						]
+					},
+					"weight" : 1,
+					"mode" : "ADDITIVE"
+				},
+				"intensity" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				},
+				"strobe" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				}
+			},
+			"metadata" : {
+				"Area" : "1",
+				"angle" : "high side left",
+				"color" : "1.0, 0.7020, 0.4431",
+				"exposure" : "3.0",
+				"filename" : "S4 LED Lustr+ 36 deg EDLT 6-11-13.ies",
+				"matrix" : "5.55111512e-016, 1, 0, 0, 0.512492537, -2.22044605e-016, 0.858691692, 0, 0.858691692, -4.4408921e-016, -0.512492537, 0, 6, 0, 14, 1",
+				"samples" : "3",
+				"volume_samples" : "3"
+			}
+		},
+		"LED_FrontRight" : {
+			"channel" : 1,
+			"type" : "Source Four Lustr+ 36",
+			"parameters" : {
+				"color" : {
+					"type" : "color",
+					"channels" : {
+						"Blue" : 0,
+						"Amber" : 0,
+						"Cyan" : 0,
+						"Green" : 0,
+						"Red" : 0,
+						"Indigo" : 0,
+						"White" : 0
+					},
+					"basis" : {
+						"Amber" : [
+							22.75055,
+							16.650221,
+							0.002898
+						],
+						"Blue" : [
+							6.2441,
+							2.706676,
+							38.314226
+						],
+						"Cyan" : [
+							2.75181,
+							18.405105,
+							8.957865
+						],
+						"Green" : [
+							11.67676,
+							35.630649,
+							2.980725
+						],
+						"Indigo" : [
+							6.98871,
+							1.786141,
+							40.548044
+						],
+						"Red" : [
+							11.83373,
+							5.07042,
+							0.000015
+						],
+						"White" : [
+							53.02644,
+							57.20048,
+							51.420583
+						]
+					},
+					"weight" : 1,
+					"mode" : "ADDITIVE"
+				},
+				"intensity" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				},
+				"strobe" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				}
+			},
+			"metadata" : {
+				"Area" : "1",
+				"angle" : "front right",
+				"color" : "1.0, 0.7020, 0.4431",
+				"exposure" : "3.0",
+				"filename" : "S4 LED Lustr+ 36 deg EDLT 6-11-13.ies",
+				"matrix" : "-0.753488839, -0.657460749, -5.55111512e-017, 0, -0.473033309, 0.542124093, 0.694507718, 0, -0.456611544, 0.523303807, -0.719485283, 0, -6.75, 7.75, 14, 1",
+				"samples" : "3",
+				"volume_samples" : "3"
+			}
+		},
+		"LED_RightShin" : {
+			"channel" : 12,
+			"type" : "Source Four Lustr+ 36",
+			"parameters" : {
+				"color" : {
+					"type" : "color",
+					"channels" : {
+						"Blue" : 0,
+						"Amber" : 0,
+						"Cyan" : 0,
+						"Green" : 0,
+						"Red" : 0,
+						"Indigo" : 0,
+						"White" : 0
+					},
+					"basis" : {
+						"Amber" : [
+							22.75055,
+							16.650221,
+							0.002898
+						],
+						"Blue" : [
+							6.2441,
+							2.706676,
+							38.314226
+						],
+						"Cyan" : [
+							2.75181,
+							18.405105,
+							8.957865
+						],
+						"Green" : [
+							11.67676,
+							35.630649,
+							2.980725
+						],
+						"Indigo" : [
+							6.98871,
+							1.786141,
+							40.548044
+						],
+						"Red" : [
+							11.83373,
+							5.07042,
+							0.000015
+						],
+						"White" : [
+							53.02644,
+							57.20048,
+							51.420583
+						]
+					},
+					"weight" : 1,
+					"mode" : "ADDITIVE"
+				},
+				"intensity" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				},
+				"strobe" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				}
+			},
+			"metadata" : {
+				"Area" : "1",
+				"angle" : "right shin",
+				"color" : "1.0, 0.7020, 0.4431",
+				"exposure" : "3.0",
+				"filename" : "S4 LED Lustr+ 36 deg EDLT 6-11-13.ies",
+				"matrix" : "0 ,-1, 0, 0, -0.988048792, -2.22044605e-016, -0.154141337, 0, 0.154141337, 2.77555756e-017, -0.988048792, 0, -8, 0, 2, 1",
+				"samples" : "3",
+				"volume_samples" : "3"
+			}
+		},
+		"LED_RightSide" : {
+			"channel" : 10,
+			"type" : "Source Four Lustr+ 36",
+			"parameters" : {
+				"color" : {
+					"type" : "color",
+					"channels" : {
+						"Blue" : 0,
+						"Amber" : 0,
+						"Cyan" : 0,
+						"Green" : 0,
+						"Red" : 0,
+						"Indigo" : 0,
+						"White" : 0
+					},
+					"basis" : {
+						"Amber" : [
+							22.75055,
+							16.650221,
+							0.002898
+						],
+						"Blue" : [
+							6.2441,
+							2.706676,
+							38.314226
+						],
+						"Cyan" : [
+							2.75181,
+							18.405105,
+							8.957865
+						],
+						"Green" : [
+							11.67676,
+							35.630649,
+							2.980725
+						],
+						"Indigo" : [
+							6.98871,
+							1.786141,
+							40.548044
+						],
+						"Red" : [
+							11.83373,
+							5.07042,
+							0.000015
+						],
+						"White" : [
+							53.02644,
+							57.20048,
+							51.420583
+						]
+					},
+					"weight" : 1,
+					"mode" : "ADDITIVE"
+				},
+				"intensity" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				},
+				"strobe" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				}
+			},
+			"metadata" : {
+				"Area" : "1",
+				"angle" : "side right",
+				"color" : "1.0, 0.7020, 0.4431",
+				"exposure" : "3.0",
+				"filename" : "S4 LED Lustr+ 36 deg EDLT 6-11-13.ies",
+				"matrix" : "0, -1, 0, 0, -0.99619472, -2.22044605e-016, -0.0871557444, 0, 0.0871557444, 1.38777878e-017, -0.99619472, 0, -8, 0, 4, 1",
+				"samples" : "3",
+				"volume_samples" : "3"
+			}
+		},
+		"LED_FrontLeft" : {
+			"channel" : 3,
+			"type" : "Source Four Lustr+ 36",
+			"parameters" : {
+				"color" : {
+					"type" : "color",
+					"channels" : {
+						"Blue" : 0,
+						"Amber" : 0,
+						"Cyan" : 0,
+						"Green" : 0,
+						"Red" : 0,
+						"Indigo" : 0,
+						"White" : 0
+					},
+					"basis" : {
+						"Amber" : [
+							22.75055,
+							16.650221,
+							0.002898
+						],
+						"Blue" : [
+							6.2441,
+							2.706676,
+							38.314226
+						],
+						"Cyan" : [
+							2.75181,
+							18.405105,
+							8.957865
+						],
+						"Green" : [
+							11.67676,
+							35.630649,
+							2.980725
+						],
+						"Indigo" : [
+							6.98871,
+							1.786141,
+							40.548044
+						],
+						"Red" : [
+							11.83373,
+							5.07042,
+							0.000015
+						],
+						"White" : [
+							53.02644,
+							57.20048,
+							51.420583
+						]
+					},
+					"weight" : 1,
+					"mode" : "ADDITIVE"
+				},
+				"intensity" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				},
+				"strobe" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				}
+			},
+			"metadata" : {
+				"Area" : "1",
+				"angle" : "front left",
+				"color" : "1.0, 0.7020, 0.4431",
+				"exposure" : "3.0",
+				"filename" : "S4 LED Lustr+ 36 deg EDLT 6-11-13.ies",
+				"matrix" : "-0.746483207, 0.66540426, -2.77555756e-017, 0, 0.473001659, 0.530636549, 0.70334506, 0, 0.468008786, 0.525035322, -0.71084857, 0, 6.75, 7.75, 14, 1",
+				"samples" : "3",
+				"volume_samples" : "3"
+			}
+		},
+		"LED_BackUp" : {
+			"channel" : 15,
+			"type" : "Source Four Lustr+ 36",
+			"parameters" : {
+				"color" : {
+					"type" : "color",
+					"channels" : {
+						"Blue" : 0,
+						"Amber" : 0,
+						"Cyan" : 0,
+						"Green" : 0,
+						"Red" : 0,
+						"Indigo" : 0,
+						"White" : 0
+					},
+					"basis" : {
+						"Amber" : [
+							22.75055,
+							16.650221,
+							0.002898
+						],
+						"Blue" : [
+							6.2441,
+							2.706676,
+							38.314226
+						],
+						"Cyan" : [
+							2.75181,
+							18.405105,
+							8.957865
+						],
+						"Green" : [
+							11.67676,
+							35.630649,
+							2.980725
+						],
+						"Indigo" : [
+							6.98871,
+							1.786141,
+							40.548044
+						],
+						"Red" : [
+							11.83373,
+							5.07042,
+							0.000015
+						],
+						"White" : [
+							53.02644,
+							57.20048,
+							51.420583
+						]
+					},
+					"weight" : 1,
+					"mode" : "ADDITIVE"
+				},
+				"intensity" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				},
+				"strobe" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				}
+			},
+			"metadata" : {
+				"Area" : "1",
+				"angle" : "back up",
+				"color" : "1.0, 0.7020, 0.4431",
+				"exposure" : "3.0",
+				"filename" : "S4 LED Lustr+ 36 deg EDLT 6-11-13.ies",
+				"matrix" : "1, 0, 0, 0, 0, -0.453990489, -0.891006529, 0, 0, 0.891006529, -0.453990489, 0, 0, -2, 1, 1",
+				"samples" : "3",
+				"volume_samples" : "3"
+			}
+		},
+		"LED_BackLeft" : {
+			"channel" : 9,
+			"type" : "Source Four Lustr+ 36",
+			"parameters" : {
+				"color" : {
+					"type" : "color",
+					"channels" : {
+						"Blue" : 0,
+						"Amber" : 0,
+						"Cyan" : 0,
+						"Green" : 0,
+						"Red" : 0,
+						"Indigo" : 0,
+						"White" : 0
+					},
+					"basis" : {
+						"Amber" : [
+							22.75055,
+							16.650221,
+							0.002898
+						],
+						"Blue" : [
+							6.2441,
+							2.706676,
+							38.314226
+						],
+						"Cyan" : [
+							2.75181,
+							18.405105,
+							8.957865
+						],
+						"Green" : [
+							11.67676,
+							35.630649,
+							2.980725
+						],
+						"Indigo" : [
+							6.98871,
+							1.786141,
+							40.548044
+						],
+						"Red" : [
+							11.83373,
+							5.07042,
+							0.000015
+						],
+						"White" : [
+							53.02644,
+							57.20048,
+							51.420583
+						]
+					},
+					"weight" : 1,
+					"mode" : "ADDITIVE"
+				},
+				"intensity" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				},
+				"strobe" : {
+					"type" : "float",
+					"val" : 0,
+					"default" : 0,
+					"max" : 1,
+					"min" : 0
+				}
+			},
+			"metadata" : {
+				"Area" : "1",
+				"angle" : "back left",
+				"color" : "1.0, 0.7020, 0.4431",
+				"exposure" : "3.0",
+				"filename" : "S4 LED Lustr+ 36 deg EDLT 6-11-13.ies",
+				"matrix" : "0.716708302, 0.697373092, 0, 0, 0.455290824, -0.467914134, 0.757473826, 0, 0.528241873, -0.542887807, -0.652865529, 0, 6, -6, 14, 1",
+				"samples" : "3",
+				"volume_samples" : "3"
+			}
+		}
+	},
+	"patches" : {
+		"arnold" : {
+			"type" : "ArnoldAnimationPatch",
+			"sceneFile" : "single_area_box.ass",
+			"pluginDir" : "C:\/Program Files\/Lumiverse Studio\/plugins",
+			"predictive" : 0,
+			"gamma" : 2.2,
+			"lights" : {
+				"LED_Back" : {
+					"type" : "photometric_light"
+				},
+				"LED_BackLeft" : {
+					"type" : "photometric_light"
+				},
+				"LED_BackRight" : {
+					"type" : "photometric_light"
+				},
+				"LED_BackUp" : {
+					"type" : "photometric_light"
+				},
+				"LED_Front" : {
+					"type" : "photometric_light"
+				},
+				"LED_FrontLeft" : {
+					"type" : "photometric_light"
+				},
+				"LED_FrontRight" : {
+					"type" : "photometric_light"
+				},
+				"LED_FrontUp" : {
+					"type" : "photometric_light"
+				},
+				"LED_Left" : {
+					"type" : "photometric_light"
+				},
+				"LED_LeftShin" : {
+					"type" : "photometric_light"
+				},
+				"LED_LeftSide" : {
+					"type" : "photometric_light"
+				},
+				"LED_Right" : {
+					"type" : "photometric_light"
+				},
+				"LED_RightShin" : {
+					"type" : "photometric_light"
+				},
+				"LED_RightSide" : {
+					"type" : "photometric_light"
+				},
+				"LED_Top" : {
+					"type" : "photometric_light"
+				}
+			},
+			"arnoldParamMaps" : {
+				"Area" : {
+					"dimension" : 1,
+					"arnoldType" : "unknown"
+				},
+				"angle" : {
+					"dimension" : 1,
+					"arnoldType" : "unknown"
+				},
+				"color" : {
+					"dimension" : 3,
+					"arnoldType" : "rgb"
+				},
+				"exposure" : {
+					"dimension" : 1,
+					"arnoldType" : "float"
+				},
+				"filename" : {
+					"dimension" : 1,
+					"arnoldType" : "string"
+				},
+				"gel" : {
+					"dimension" : 1,
+					"arnoldType" : "unknown"
+				},
+				"intensity" : {
+					"dimension" : 1,
+					"arnoldType" : "float"
+				},
+				"lookat" : {
+					"dimension" : 1,
+					"arnoldType" : "unknown"
+				},
+				"matrix" : {
+					"dimension" : 16,
+					"arnoldType" : "matrix"
+				},
+				"position" : {
+					"dimension" : 3,
+					"arnoldType" : "point"
+				},
+				"samples" : {
+					"dimension" : 1,
+					"arnoldType" : "int"
+				},
+				"strobe" : {
+					"dimension" : 1,
+					"arnoldType" : "unknown"
+				},
+				"tilt" : {
+					"dimension" : 1,
+					"arnoldType" : "unknown"
+				},
+				"up" : {
+					"dimension" : 1,
+					"arnoldType" : "unknown"
+				},
+				"volume_samples" : {
+					"dimension" : 1,
+					"arnoldType" : "int"
+				}
+			}
+		}
+	}
+}

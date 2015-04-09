@@ -1,0 +1,112 @@
+### exported: Thu Apr 02 13:16:00 2015
+### from:     Arnold 4.2.4.1 windows icc-14.0.2 oiio-1.4.14 rlm-11.2.2 2015/03/11 13:59:27
+### host app: MtoA 1.2.1.0 a835e709fd59 (Develop) tip Maya 2015
+
+
+
+options
+{
+ xres 960
+ yres 540
+ aspect_ratio 1.00000012
+ camera "cameraShape1"
+}
+
+persp_camera
+{
+ name cameraShape1
+ fov 55.0000229
+ focus_distance 1
+ aperture_size 0
+ aperture_blades 0
+ aperture_rotation 0
+ aperture_blade_curvature 0
+ aperture_aspect_ratio 1
+ uv_remap 0 0 0 0
+ matrix
+ -1 1.22464685e-016 -1.23259516e-032 0
+ -3.69778549e-032 -4.4408921e-016 1 0
+ 1.22464685e-016 1 2.22044605e-016 0
+ 0 15 4.5 1
+ near_clip 0.100000001
+ far_clip 10000
+ shutter_start 0
+ shutter_end 1
+ shutter_type "box"
+ rolling_shutter "off"
+ rolling_shutter_duration 0
+ screen_window_min -1 -1
+ screen_window_max 1 1
+ exposure 0
+}
+
+spot_light
+{
+ name LED_RightSideShape
+ radius 0
+ lens_radius 0
+ cone_angle 40
+ penumbra_angle 0
+ cosine_power 0
+ aspect_ratio 1
+ decay_type "quadratic"
+ matrix
+ 0 -1 0 0
+ -0.99619472 -2.22044605e-016 -0.0871557444 0
+ 0.0871557444 1.38777878e-017 -0.99619472 0
+ -8 0 4 1
+ color 1 1 1
+ intensity 1
+ exposure 0
+ cast_shadows on
+ cast_volumetric_shadows on
+ shadow_density 1
+ shadow_color 0 0 0
+ samples 1
+ normalize on
+ affect_diffuse on
+ affect_specular on
+ affect_volumetrics on
+ diffuse 1
+ specular 1
+ sss 1
+ indirect 1
+ max_bounces 999
+ volume_samples 2
+}
+
+spot_light
+{
+ name LED_LeftSideShape
+ radius 0
+ lens_radius 0
+ cone_angle 40
+ penumbra_angle 0
+ cosine_power 0
+ aspect_ratio 1
+ decay_type "quadratic"
+ matrix
+ 0 1 0 0
+ 0.99619472 -4.4408921e-016 -0.0871557444 0
+ -0.0871557444 2.77555756e-017 -0.99619472 0
+ 8 0 4 1
+ color 1 1 1
+ intensity 1
+ exposure 0
+ cast_shadows on
+ cast_volumetric_shadows on
+ shadow_density 1
+ shadow_color 0 0 0
+ samples 1
+ normalize on
+ affect_diffuse on
+ affect_specular on
+ affect_volumetrics on
+ diffuse 1
+ specular 1
+ sss 1
+ indirect 1
+ max_bounces 999
+ volume_samples 2
+}
+
