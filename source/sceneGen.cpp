@@ -244,7 +244,7 @@ void pickColors(Rig* r) {
   vector<string> angles = { "back", "back left", "back right", "high side left", "high side right", "side left", "side right", "left shin", "right shin", "front up", "back up" };
   for (const auto& a : angles) {
     int ai = rng() % accentx.size();
-    r->select("$angle=" + ai).setParam("color", accentx[ai], accenty[ai]);
+    r->select("$angle=" + a).setParam("color", accentx[ai], accenty[ai]);
   }
 }
 
