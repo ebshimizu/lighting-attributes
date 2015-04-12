@@ -49,7 +49,7 @@ void renderAllScenes(Rig* r, Playback* pb) {
   int i = 1;
   for (const auto& name : timelines) {
     pb->getLayer("main")->play(name);
-    Sleep(50);
+//    Sleep(50);
     Logger::log(INFO, "Rendering Scene " + name);
     cout << "Rendering Scene " << i << "/" << timelines.size() << "\n";
     p->renderSingleFrame(r->getAllDevices().getDevices(), baseDir + name + ".png");
@@ -243,14 +243,14 @@ void pickColors(Rig* r) {
   // Pick accents
   vector<string> angles = { "back", "back left", "back right", "high side left", "high side right", "side left", "side right", "left shin", "right shin", "front up", "back up" };
   for (const auto& a : angles) {
-    int a = rng() % accentx.size();
-    r->select("$angle=" + a).setParam("color", accentx[a], accenty[a]);
+    int ai = rng() % accentx.size();
+    r->select("$angle=" + ai).setParam("color", accentx[ai], accenty[ai]);
   }
 }
 
 int main(int argc, char**argv) {
-  Logger::setLogFile("C:/Users/eshimizu/Documents/Lumiverse/attributes/scenes/lumiverse.log");
-  Rig* r = new Rig("C:/Users/eshimizu/Documents/Lumiverse/attributes/scenes/single_area_box.rig.json");
+  Logger::setLogFile("E:/Users/falindrith/Documents/Programming/Lumiverse/lighting-attributes/scenes/lumiverse.log");
+  Rig* r = new Rig("E:/Users/falindrith/Documents/Programming/Lumiverse/lighting-attributes/scenes/single_area_box.rig.json");
   Playback* pb = new Playback(r);
   pb->attachToRig();
 
@@ -304,8 +304,8 @@ int main(int argc, char**argv) {
     numScenes = permuteScene(r, pb, numScenes);
   }
 
-  r->save("C:/Users/eshimizu/Documents/Lumiverse/attributes/scenes/samples.rig.json", true);
-  pb->save("C:/Users/eshimizu/Documents/Lumiverse/attributes/scenes/samples.playback.json", true);
+  r->save("E:/Users/falindrith/Documents/Programming/Lumiverse/lighting-attributes/scenes/samples.rig.json", true);
+  pb->save("E:/Users/falindrith/Documents/Programming/Lumiverse/lighting-attributes/scenes/samples.playback.json", true);
   // renderAllScenes(r, pb);
   delete r;
 }
