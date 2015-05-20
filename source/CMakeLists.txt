@@ -33,8 +33,14 @@ set (FEATURE_SOURCE
   featureGen.cpp
 )
 
+set (EXPLORE_SOURCE
+    explore.cpp
+    C:/lib/libsvm/svm.cpp
+    C:/lib/libsvm/svm.h
+)
+
 find_package(Lumiverse REQUIRED)
-include_directories(${LUMIVERSE_INCLUDE_DIR} ${LUMIVERSE_ARNOLD_INCLUDE_DIR})
+include_directories(${LUMIVERSE_INCLUDE_DIR} ${LUMIVERSE_ARNOLD_INCLUDE_DIR} C:/lib/libsvm)
 set(ACTIVE_LIBRARIES ${LUMIVERSE_LIBRARIES})
 
 add_executable (SceneGenerator ${ATTRIBUTE_SOURCE})
@@ -42,3 +48,6 @@ target_link_libraries(SceneGenerator ${ACTIVE_LIBRARIES})
 
 add_executable (FeatureGenerator ${FEATURE_SOURCE})
 target_link_libraries(FeatureGenerator ${ACTIVE_LIBRARIES})
+
+add_executable (ExplorationTest ${EXPLORE_SOURCE})
+target_link_libraries(ExplorationTest ${ACTIVE_LIBRARIES})

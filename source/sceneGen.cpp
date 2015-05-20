@@ -215,9 +215,10 @@ int permuteScene(Rig* r, Playback* pb, int index = 1) {
   return index;
 }
 
-void pickColors(Rig* r) {
+void pickColors(Rig* r, int lr) {
   // Pick warm in left or right
-  if (rng() % 2 == 0) {
+  int dummy = rng(); // advance RNG once to compensate
+  if (lr == 0) {
     int w = rng() % warmx.size();
     int c = rng() % coolx.size();
     r->select("$angle=front left").setParam("color", warmx[w], warmy[w]);
@@ -249,8 +250,8 @@ void pickColors(Rig* r) {
 }
 
 int main(int argc, char**argv) {
-  Logger::setLogFile("E:/Users/falindrith/Documents/Programming/Lumiverse/lighting-attributes/scenes/lumiverse.log");
-  Rig* r = new Rig("E:/Users/falindrith/Documents/Programming/Lumiverse/lighting-attributes/scenes/single_area_box.rig.json");
+  //Logger::setLogFile("E:/Users/falindrith/Documents/Programming/Lumiverse/lighting-attributes/scenes/lumiverse.log");
+  Rig* r = new Rig("C:/Users/eshimizu/Documents/Lumiverse/attributes/scenes/single_area_box.rig.json");
   Playback* pb = new Playback(r);
   pb->attachToRig();
 
@@ -300,12 +301,12 @@ int main(int argc, char**argv) {
   numScenes = permuteScene(r, pb, numScenes);
 
   for (int i = 0; i < 10; i++) {
-    pickColors(r);
+    pickColors(r, i % 2);
     numScenes = permuteScene(r, pb, numScenes);
   }
 
-  r->save("E:/Users/falindrith/Documents/Programming/Lumiverse/lighting-attributes/scenes/samples.rig.json", true);
-  pb->save("E:/Users/falindrith/Documents/Programming/Lumiverse/lighting-attributes/scenes/samples.playback.json", true);
+  r->save("C:/Users/eshimizu/Documents/Lumiverse/attributes/scenes/samples.rig.json", true);
+  pb->save("C:/Users/eshimizu/Documents/Lumiverse/attributes/scenes/samples.playback.json", true);
   // renderAllScenes(r, pb);
   delete r;
 }
