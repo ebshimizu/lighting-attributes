@@ -1,13 +1,13 @@
 #include <LumiverseCore.h>
-#include <LumiverseShowControl\LumiverseShowControl.h>
+#include <LumiverseShowControl/LumiverseShowControl.h>
 
 using namespace Lumiverse;
 using namespace Lumiverse::ShowControl;
 
-Eigen::Vector3d getColor(DeviceSet d) {
+Eigen::Vector3d getColor(DeviceSet ds) {
   Eigen::Vector3d xyz(0,0,0);
   
-  for (auto d : d.getDevices()) {
+  for (auto d : ds.getDevices()) {
     auto color = d->getColor();
     if (color == nullptr) {
       auto intens = (LumiverseFloat*) d->getParam("intensity");
@@ -21,10 +21,10 @@ Eigen::Vector3d getColor(DeviceSet d) {
   return ColorUtils::convXYZtoxyY(xyz);
 }
 
-float getIntensity(DeviceSet d) {
+float getIntensity(DeviceSet ds) {
   float val = 0;
 
-  for (auto d : d.getDevices()) {
+  for (auto d : ds.getDevices()) {
     // ASSUMES NO GELS AT THE MOMENT.
 
     auto intens = (LumiverseFloat*)d->getParam("intensity");
@@ -112,7 +112,7 @@ int main(int argc, char**argv) {
   // Generate features for each element in the playback timelines
   for (const auto& name : pb->getTimelineNames()) {
     pb->getLayer("main")->play(name);
-    Sleep(50);
+    usleep(50);
     cout << "Writing feature vector for example " << name << "\n";
     writeFeature(name, rig, file);
   }

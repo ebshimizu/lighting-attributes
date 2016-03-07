@@ -1,10 +1,10 @@
 #include <LumiverseCore.h>
-#include <LumiverseShowControl\LumiverseShowControl.h>
+#include <LumiverseShowControl/LumiverseShowControl.h>
 
 using namespace Lumiverse;
 using namespace Lumiverse::ShowControl;
 
-string baseDir = "C:/Users/eshimizu/Documents/Lumiverse/attributes/scenes/gen/";
+string baseDir = "/usr2/eshimizu/lighting-attributes/scenes/gen/";
 
 // Creates a timeline containing the current state of the rig and nothing else.
 bool createTimeline(Rig* r, Playback* pb, int index) {
@@ -35,8 +35,9 @@ void renderAllScenes(Rig* r, Playback* pb) {
 
   int i = 1;
   for (const auto& name : timelines) {
+//    if (i < 350) { i++; continue; }
     pb->getLayer("main")->play(name);
-    Sleep(50);
+    usleep(50000);
     Logger::log(INFO, "Rendering Scene " + name);
     cout << "Rendering Scene " << i << "/" << timelines.size() << "\n";
     p->renderSingleFrame(r->getAllDevices().getDevices(), baseDir + name + ".png");
@@ -287,57 +288,24 @@ int permuteScene(Rig* r, Playback* pb, int index = 1) {
 }
 
 int main(int argc, char**argv) {
-  Logger::setLogFile("C:/Users/eshimizu/Documents/Lumiverse/attributes/scenes/lumiverse.log");
-  Rig* r = new Rig("C:/Users/eshimizu/Documents/Lumiverse/attributes/scenes/single_area_box.rig.json");
-  Playback* pb = new Playback(r);
+  Logger::setLogFile("/usr2/eshimizu/lighting-attributes/scenes/lumiverse.log");
+  Rig* r = new Rig("/usr2/eshimizu/lighting-attributes/scenes/single_area_box.rig.json");
+  Playback* pb = new Playback(r, "/usr2/eshimizu/lighting-attributes/scenes/samples.playback.json");
   pb->attachToRig();
 
-  pb->addLayer(shared_ptr<Layer>(new Layer(r, pb, "main", 1, 1)));
+  // pb->addLayer(shared_ptr<Layer>(new Layer(r, pb, "main", 1, 1)));
   pb->getLayer("main")->activate();
+  pb->getLayer("main")->resume();
 
   ArnoldAnimationPatch* p = (ArnoldAnimationPatch*) r->getPatch("arnold");
   r->init();
   r->run();
 
   p->disableContinuousRenderMode();
-  p->setSamples(1);
+  p->setSamples(3);
 
-  r->select("$angle=front left").setParam("color", 0.488, 0.409, 1);
-  r->select("$angle=front right").setParam("color", 0.271, 0.290, 1);
-  r->select("$angle=front").setParam("color", 0.505, 0.427);
-  r->select("$angle=top").setParam("color", 0.568, 0.381);
-  r->select("$angle=high side left").setParam("color", 0.608, 0.385);
-  r->select("$angle=high side right").setParam("color", 0.496, 0.229);
-  r->select("$angle=back").setParam("color", 0.692, 0.302);
-  r->select("$angle=back left").setParam("color", 0.259, 0.437);
-  r->select("$angle=back right").setParam("color", 0.610, 0.308);
-  r->select("$angle=side right").setParam("color", 0.385, 0.361);
-  r->select("$angle=side left").setParam("color", 0.457, 0.425);
-  r->select("$angle=right shin").setParam("color", 0.584, 0.268);
-  r->select("$angle=left shin").setParam("color", 0.162, 0.108);
-  r->select("$angle=front up").setParam("color", 0.488, 0.409);
-  r->select("$angle=back up").setParam("color", 0.488, 0.409);
-  int numScenes = permuteScene(r, pb);
-
-  r->select("$angle=front").setParam("color", 0.291, 0.286, 1);
-  r->select("$angle=front right").setParam("color", 0.477, 0.419, 1);
-  r->select("$angle=front left").setParam("color", 0.333, 0.355, 1);
-  r->select("$angle=top").setParam("color", 0.157, 0.209, 1);
-  r->select("$angle=high side left").setParam("color", 0.147, 0.070, 1);
-  r->select("$angle=high side right").setParam("color", 0.584, 0.268, 1);
-  r->select("$angle=back").setParam("color", 0.457, 0.415);
-  r->select("$angle=back left").setParam("color", 0.635, 0.336);
-  r->select("$angle=back right").setParam("color", 0.280, 0.561);
-  r->select("$angle=side right").setParam("color", 0.560, 0.433);
-  r->select("$angle=side left").setParam("color", 0.277, 0.187);
-  r->select("$angle=right shin").setParam("color", 0.264, 0.311);
-  r->select("$angle=left shin").setParam("color", 0.490, 0.396);
-  r->select("$angle=front up").setParam("color", 0.692, 0.302);
-  r->select("$angle=back up").setParam("color", 0.147, 0.333);
-  numScenes = permuteScene(r, pb, numScenes);
-
-  r->save("C:/Users/eshimizu/Documents/Lumiverse/attributes/scenes/samples.rig.json", true);
-  pb->save("C:/Users/eshimizu/Documents/Lumiverse/attributes/scenes/samples.playback.json", true);
+  //r->save("/usr2/eshimizu/lighting-attributes/scenes/samples.rig.json", true);
+  //pb->save("/usr2/eshimizu/lighting-attributes/scenes/samples.playback.json", true);
   renderAllScenes(r, pb);
   delete r;
 }

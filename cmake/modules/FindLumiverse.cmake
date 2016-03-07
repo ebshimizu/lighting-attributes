@@ -12,41 +12,41 @@ if (LUMIVERSE_INCLUDE_DIR)
 endif (LUMIVERSE_INCLUDE_DIR)
 
 find_path (LUMIVERSE_INCLUDE_DIR LumiverseCore.h
-  HINTS /usr/local/lib/Lumiverse/include /usr/include/Lumiverse/include C:/lib/Lumiverse/include
+  HINTS /usr2/eshimizu/liblumiverse/include /usr/local/lib/Lumiverse/include /usr/include/Lumiverse/include C:/lib/Lumiverse/include
 )
 
 find_library(LUMIVERSE_CORE_LIBRARY 
-  NAMES LumiverseCore.lib LumiverseCore.a LumiverseCore.so
-  HINTS /usr/local/lib/Lumiverse/lib C:/lib/Lumiverse/lib
+  NAMES LumiverseCore.lib libLumiverseCore.a libLumiverseCore.so
+  HINTS /usr2/eshimizu/liblumiverse/lib /usr/local/lib/Lumiverse/lib C:/lib/Lumiverse/lib
 )
 
 find_library(LUMIVERSE_CONTROL_LIBRARY 
-  NAMES LumiverseShowControl.lib LumiverseShowControl.a LumiverseShowControl.so
-  HINTS /usr/local/lib/Lumiverse/lib C:/lib/Lumiverse/lib
+  NAMES LumiverseShowControl.lib libLumiverseShowControl.a libLumiverseShowControl.so
+  HINTS /usr2/eshimizu/liblumiverse/lib /usr/local/lib/Lumiverse/lib C:/lib/Lumiverse/lib
 )
 
 find_library(LUMIVERSE_CLP_LIBRARY 
-  NAMES clp.lib clp.a clp.so
-  HINTS /usr/local/lib/Lumiverse/lib C:/lib/Lumiverse/lib
+  NAMES clp.lib libclp.a cliblp.so
+  HINTS /usr2/eshimizu/liblumiverse/lib /usr/local/lib/Lumiverse/lib C:/lib/Lumiverse/lib
 )
 
 find_library(LUMIVERSE_JSON_LIBRARY 
-  NAMES libjson.lib libjson.a libjson.so
-  HINTS /usr/local/lib/Lumiverse/lib C:/lib/Lumiverse/lib
+  NAMES libjson.lib liblibjson.a liblibjson.so
+  HINTS /usr2/eshimizu/liblumiverse/lib /usr/local/lib/Lumiverse/lib C:/lib/Lumiverse/lib
 )
 
 SET(LUMIVERSE_LIBRARIES ${LUMIVERSE_CORE_LIBRARY} ${LUMIVERSE_CONTROL_LIBRARY} ${LUMIVERSE_CLP_LIBRARY} ${LUMIVERSE_JSON_LIBRARY})
 
 find_library(LUMIVERSE_ARNOLD_LIBRARY 
-  NAMES ai.lib ai.a ai.so
-  HINTS /usr/local/lib/Lumiverse/lib C:/lib/Lumiverse/lib
+  NAMES ai.lib ai.a ai.so libai.so libai.a
+  HINTS /usr2/eshimizu/liblumiverse/lib /usr/local/lib/Lumiverse/lib C:/lib/Lumiverse/lib
 )
 
 IF (LUMIVERSE_ARNOLD_LIBRARY)
   find_package(PNG REQUIRED)
 
   find_path (LUMIVERSE_ARNOLD_INCLUDE_DIR ai_drivers.h
-    HINTS /usr/local/lib/Lumiverse/include/lib/arnold/include /usr/include/Lumiverse/include/lib/arnold/include C:/lib/Lumiverse/include/lib/arnold/include
+    HINTS /usr2/eshimizu/liblumiverse/include/lib/arnold/include /usr/local/lib/Lumiverse/include/lib/arnold/include /usr/include/Lumiverse/include/lib/arnold/include C:/lib/Lumiverse/include/lib/arnold/include
   )
 
   IF(PNG_FOUND)
@@ -60,7 +60,7 @@ ENDIF (LUMIVERSE_ARNOLD_LIBRARY)
 
 find_library(LUMIVERSE_FTD2XX_LIBRARY 
   NAMES ftd2xx.lib ftd2xx.a ftd2xx.so
-  HINTS /usr/local/lib/Lumiverse/lib C:/lib/Lumiverse/lib
+  HINTS /usr2/eshimizu/liblumiverse/lib /usr/local/lib/Lumiverse/lib C:/lib/Lumiverse/lib
 )
 
 IF (LUMIVERSE_FTD2XX_LIBRARY)
@@ -69,7 +69,7 @@ ENDIF (LUMIVERSE_FTD2XX_LIBRARY)
 
 find_library(LUMIVERSE_ARTNET_LIBRARY 
   NAMES libartnet.lib libartnet.a libartnet.so
-  HINTS /usr/local/lib/Lumiverse/lib C:/lib/Lumiverse/lib
+  HINTS /usr2/eshimizu/liblumiverse/lib /usr/local/lib/Lumiverse/lib C:/lib/Lumiverse/lib
 )
 
 IF (LUMIVERSE_ARTNET_LIBRARY)

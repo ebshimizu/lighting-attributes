@@ -164,7 +164,7 @@ standard
 MayaFile
 {
  name file1
- filename "C:/Users/eshimizu/Downloads/5b717341295c7be10473ccc4923711d9/SBP01_01.JPG"
+ filename "/usr2/eshimizu/lighting-attributes/scenes/SBP01_01.jpg"
  mipBias 0
  filter "smart_bicubic"
  useDefaultColor on

@@ -1223,7 +1223,7 @@
 		"arnold" : {
 			"type" : "ArnoldAnimationPatch",
 			"sceneFile" : "single_area_box.ass",
-			"pluginDir" : "C:\/Program Files\/Lumiverse Studio\/plugins",
+			"pluginDir" : "/usr2/eshimizu/liblumiverse/lib/arnold/plugin;/usr2/eshimizu/solidangle/mtoa/2015/shaders;/usr2/eshimizu/solidangle/mtoa/2015/plug-ins",
 			"predictive" : 0,
 			"gamma" : 2.2,
 			"lights" : {

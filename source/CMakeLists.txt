@@ -33,12 +33,21 @@ set (FEATURE_SOURCE
   featureGen.cpp
 )
 
+set (SAMPLE_SOURCE
+  sampleGen.cpp
+  sampleTools.h
+  sampleTools.cpp
+)
+
 find_package(Lumiverse REQUIRED)
 include_directories(${LUMIVERSE_INCLUDE_DIR} ${LUMIVERSE_ARNOLD_INCLUDE_DIR})
 set(ACTIVE_LIBRARIES ${LUMIVERSE_LIBRARIES})
 
-add_executable (SceneGenerator ${ATTRIBUTE_SOURCE})
-target_link_libraries(SceneGenerator ${ACTIVE_LIBRARIES})
+# add_executable (SceneGenerator ${ATTRIBUTE_SOURCE})
+# target_link_libraries(SceneGenerator ${ACTIVE_LIBRARIES})
 
-add_executable (FeatureGenerator ${FEATURE_SOURCE})
-target_link_libraries(FeatureGenerator ${ACTIVE_LIBRARIES})
+add_executable (Sampler ${SAMPLE_SOURCE})
+target_link_libraries(Sampler ${ACTIVE_LIBRARIES})
+
+# add_executable (FeatureGenerator ${FEATURE_SOURCE})
+# target_link_libraries(FeatureGenerator ${ACTIVE_LIBRARIES})
