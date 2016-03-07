@@ -1,6 +1,7 @@
 #include <LumiverseCore.h>
 #include <LumiverseShowControl/LumiverseShowControl.h>
 #include "sampleTools.h"
+#include <stdio.h>
 
 using namespace std;
 
@@ -14,5 +15,5 @@ int main(int argc, char** argv) {
   string source = string(argv[2]);
   string dest = string(argv[3]);
 
-
+  cout << start << " " << source << " >> " << dest << "\n";
 }

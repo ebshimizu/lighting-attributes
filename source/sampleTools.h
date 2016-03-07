@@ -4,6 +4,7 @@
 #include <functional>
 #include <LumiverseCore.h>
 #include <LumiverseShowControl/LumiverseShowControl.h>
+#include <list>
 
 using namespace std;
 using namespace Lumiverse;

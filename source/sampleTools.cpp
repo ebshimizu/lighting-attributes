@@ -203,11 +203,13 @@ Snapshot* vectorToSnapshot(Eigen::VectorXd v)
 
 Device* getSpecifiedDevice(EditLightType l, Snapshot * s)
 {
-  auto& devices = s->getRigData();
+  auto devices = s->getRigData();
 
   // Rim is easy to identify
-  if (l == L_RIM)
-    return devices["rim"];
+  if (l == L_RIM) {
+    Device* d = devices["rim"];
+    return d;
+  }
 
   Device* key = devices["right"];
   Device* fill = devices["left"];
