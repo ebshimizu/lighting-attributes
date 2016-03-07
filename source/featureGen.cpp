@@ -4,13 +4,26 @@
 using namespace Lumiverse;
 using namespace Lumiverse::ShowControl;
 
-Eigen::Vector3d getColor(DeviceSet ds) {
+// http://en.wikipedia.org/wiki/CIELUV
+Eigen::Vector2d xyTouv(float x, float y) {
+  return Eigen::Vector2d((4 * x) / (-2 * x + 12 * y + 3), (9 * y) / (-2 * x + 12 * y + 3));
+}
+
+Eigen::Vector2d uvToxy(float u, float v) {
+  return Eigen::Vector2d((9 * u) / (6 * u - 16 * v + 12), (4 * v) / (6 * u - 16 * v + 12));
+}
+
+Eigen::Vector3d getColor(DeviceSet d) {
   Eigen::Vector3d xyz(0,0,0);
   
   for (auto d : ds.getDevices()) {
     auto color = d->getColor();
+    auto intens = (LumiverseFloat*) d->getParam("intensity");
+
+    //if (intens->getVal() == 0)
+    //  continue;
+
     if (color == nullptr) {
-      auto intens = (LumiverseFloat*) d->getParam("intensity");
       xyz += ColorUtils::getApproxColor("N/C", intens->getVal());
     }
     else {
@@ -18,7 +31,9 @@ Eigen::Vector3d getColor(DeviceSet ds) {
     }
   }
 
-  return ColorUtils::convXYZtoxyY(xyz);
+  auto xyy = ColorUtils::convXYZtoxyY(xyz);
+  auto uv = xyTouv(xyy[0], xyy[1]);
+  return Eigen::Vector3d(uv[0], uv[1], xyy[2]);
 }
 
 float getIntensity(DeviceSet ds) {
@@ -107,7 +122,7 @@ int main(int argc, char**argv) {
   pb->getLayer("main")->resume();
 
   ofstream file;
-  file.open("features.csv", ios::out);
+  file.open("features_uv.csv", ios::out);
 
   // Generate features for each element in the playback timelines
   for (const auto& name : pb->getTimelineNames()) {

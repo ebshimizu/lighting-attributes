@@ -40,7 +40,7 @@ set (SAMPLE_SOURCE
 )
 
 find_package(Lumiverse REQUIRED)
-include_directories(${LUMIVERSE_INCLUDE_DIR} ${LUMIVERSE_ARNOLD_INCLUDE_DIR})
+include_directories(${LUMIVERSE_INCLUDE_DIR} ${LUMIVERSE_ARNOLD_INCLUDE_DIR} C:/lib/libsvm)
 set(ACTIVE_LIBRARIES ${LUMIVERSE_LIBRARIES})
 
 # add_executable (SceneGenerator ${ATTRIBUTE_SOURCE})
