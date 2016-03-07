@@ -13,9 +13,13 @@ Author:  falindrith
 #include <list>
 //#include <vld.h>
 
-Rig* _rig;
+static Rig* _rig;
 
 Rig* getRig() {
+  if (_rig == nullptr) {
+   _rig = new Rig();
+  }
+
   return _rig;
 }
 
@@ -112,6 +116,8 @@ void filterResults(list<Snapshot*>& results, double t) {
         continue;
       }
 
+      Snapshot* a = *it;
+      auto dat = a->getRigData();
       double dist = (snapshotToVector(*it) - snapshotToVector(*it2)).norm();
 
       // delete element if it's too close
@@ -235,6 +241,8 @@ Device* getSpecifiedDevice(EditLightType l, Snapshot * s)
 list<Snapshot*> sampleScenes(list<Snapshot*> start)
 {
   list<Snapshot*> newResults = runSingleLevelSearch(start);
+
+  cout << newResults.size() << "\n";
 
   filterResults(newResults, 0.5);
   return newResults;
