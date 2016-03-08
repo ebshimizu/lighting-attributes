@@ -242,9 +242,7 @@ list<Snapshot*> sampleScenes(list<Snapshot*> start)
 {
   list<Snapshot*> newResults = runSingleLevelSearch(start);
 
-  cout << newResults.size() << "\n";
-
-  filterResults(newResults, 0.5);
+  filterResults(newResults, 0.4);
   return newResults;
 }
 
@@ -274,7 +272,7 @@ list<Eigen::VectorXd> performEdit(EditType t, Snapshot* orig) {
   double sigma = 0.05;
 
   auto res = doMCMC(t, orig, 1000, sigma, true);
-  delete orig;
+  // delete orig;
   return res.first;
 }
 

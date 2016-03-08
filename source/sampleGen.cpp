@@ -3,6 +3,8 @@
 #include "sampleTools.h"
 #include <stdio.h>
 #include <dirent.h>
+#include <sstream>
+#include <fstream>
 
 using namespace std;
 
@@ -32,8 +34,6 @@ int main(int argc, char** argv) {
 
         Snapshot* s = new Snapshot(getRig(), nullptr);
         scenesToSample.push_back(s);
-        auto dat = s->getRigData();
-        cout << getRig()->getDevice("left")->getIntensity()->asPercent() << "\n";
       }
     }
     closedir (dir);
@@ -43,8 +43,30 @@ int main(int argc, char** argv) {
     return EXIT_FAILURE;
   }
 
-  cout << scenesToSample.size() << "\n";
   list<Snapshot*> samples = sampleScenes(scenesToSample);
-  cout << samples.size() << "\n";
+
+  for (Snapshot* s : samples) {
+    stringstream ss;
+    ss << dest << "/" << start;
+    string baseFile = ss.str();
+
+    // Write rig file
+    s->loadSnapshot(getRig(), nullptr);
+    getRig()->save(baseFile + ".rig.json", true);
+
+    // Write feature vector file
+    ofstream csv;
+    csv.open(baseFile + ".csv", ofstream::out | ofstream::trunc);
+    auto vec = snapshotToVector(s);
+    bool first = true;
+    for (int i = 0; i <  vec.size() ; i++) {
+      if (!first)
+        csv << ",";
+      first = false;
+      csv << vec[i];
+    }
+    csv.close();
+    start++;
+  }
 
 }
