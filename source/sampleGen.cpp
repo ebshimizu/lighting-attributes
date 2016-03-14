@@ -28,9 +28,9 @@ int main(int argc, char** argv) {
     while ((ent = readdir (dir)) != NULL) {
       string fname = string(ent->d_name);
       if (fname.find(".json") != string::npos) {
-        cout << source + "/" +  fname << "\n";
+        cout << "Found " +  source + "/" +  fname << "\n";
         getRig()->load(source + "/" +fname);
-	getRig()->init();
+        getRig()->init();
 
         Snapshot* s = new Snapshot(getRig(), nullptr);
         scenesToSample.push_back(s);
@@ -44,6 +44,7 @@ int main(int argc, char** argv) {
   }
 
   list<Snapshot*> samples = sampleScenes(scenesToSample);
+  cout << "Samples generated: " << samples.size() << "\n";
 
   for (Snapshot* s : samples) {
     stringstream ss;

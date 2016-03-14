@@ -39,6 +39,12 @@ set (SAMPLE_SOURCE
   sampleTools.cpp
 )
 
+set (RENDER_SOURCE
+  render.cpp
+  sampleTools.h
+  sampleTools.cpp
+)
+
 find_package(Lumiverse REQUIRED)
 include_directories(${LUMIVERSE_INCLUDE_DIR} ${LUMIVERSE_ARNOLD_INCLUDE_DIR} C:/lib/libsvm)
 set(ACTIVE_LIBRARIES ${LUMIVERSE_LIBRARIES})
@@ -48,6 +54,9 @@ set(ACTIVE_LIBRARIES ${LUMIVERSE_LIBRARIES})
 
 add_executable (Sampler ${SAMPLE_SOURCE})
 target_link_libraries(Sampler ${ACTIVE_LIBRARIES})
+
+add_executable (Renderer ${RENDER_SOURCE})
+target_link_libraries(Renderer ${ACTIVE_LIBRARIES})
 
 # add_executable (FeatureGenerator ${FEATURE_SOURCE})
 # target_link_libraries(FeatureGenerator ${ACTIVE_LIBRARIES})

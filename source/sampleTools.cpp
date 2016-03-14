@@ -242,7 +242,7 @@ list<Snapshot*> sampleScenes(list<Snapshot*> start)
 {
   list<Snapshot*> newResults = runSingleLevelSearch(start);
 
-  filterResults(newResults, 0.4);
+  filterResults(newResults, 0.35);
   return newResults;
 }
 
@@ -287,7 +287,7 @@ pair<list<Eigen::VectorXd>, int> doMCMC(EditType t, Snapshot * start, int iters,
   // RNG
   unsigned seed1 = std::chrono::system_clock::now().time_since_epoch().count();
   default_random_engine gen(seed1);
-  normal_distribution<double> gdist(0, 0.003);  // start with sdev 2
+  normal_distribution<double> gdist(0, 0.005);  // start with sdev 2
   uniform_real_distribution<double> udist(0.0, 1.0);
 
   // Constants
